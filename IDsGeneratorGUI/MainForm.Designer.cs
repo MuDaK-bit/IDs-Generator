@@ -1,6 +1,6 @@
 ﻿namespace IDsGenerator
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.buttonGenerateListfile = new System.Windows.Forms.Button();
             this.buttonGeneratePatch = new System.Windows.Forms.Button();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -100,7 +100,7 @@
             this.buttonFindPath.UseVisualStyleBackColor = true;
             this.buttonFindPath.Click += new System.EventHandler(this.buttonFindPath_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,7 +116,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "IDs Generator";
             this.ResumeLayout(false);
             this.PerformLayout();
