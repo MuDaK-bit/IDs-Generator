@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace IDsGenerator
 {
     partial class Form1
     {
