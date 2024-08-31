@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -25,7 +26,12 @@ namespace IDsGenerator
                 // Parse ID
                 int id = int.Parse(textBoxID.Text);
 
-              
+                // Get the directory of the executable
+                string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+                string listfilePath = Path.Combine(exeDirectory, "listfile.csv");
+
+
                 string folderPath = textBoxPath.Text;
                 if (!Directory.Exists(folderPath))
                 {
@@ -45,22 +51,33 @@ namespace IDsGenerator
 
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
-                        string listfilePath = saveFileDialog.FileName;
+                        string txtPath = saveFileDialog.FileName;
 
        
-                        using (StreamWriter writer = new StreamWriter(listfilePath, false))
+                        using (StreamWriter writer = new StreamWriter(txtPath, false))
                         {
                             foreach (string file in files)
                             {
                     
                                 string fileName = Path.GetFileName(file);
+                                int? listfileid = Program.FindListName(fileName, listfilePath);
 
-      
-                                string line = $"{{\"file\":\"{fileName}\",\"id\":{id}}},";
-                                writer.WriteLine(line);
+                                if (checkBoxListfileID.Checked && listfileid.HasValue)
+                                {
+                                    
+                                    string line = $"{{\"file\":\"{fileName}\",\"id\":{listfileid}}},";
+                                    writer.WriteLine(line);
+                                
+                                }
+                                else
+                                {
+                                    string line = $"{{\"file\":\"{fileName}\",\"id\":{id}}},";
+                                    writer.WriteLine(line);
 
-                                // Adding to ID 1 
-                                id++;
+                                    // Adding to ID 1 
+                                    id++;
+                                }
+
                             }
                         }
 

@@ -36,11 +36,12 @@
             this.textBoxPath = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonFindPath = new System.Windows.Forms.Button();
+            this.checkBoxListfileID = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonGenerateListfile
             // 
-            this.buttonGenerateListfile.Location = new System.Drawing.Point(12, 146);
+            this.buttonGenerateListfile.Location = new System.Drawing.Point(10, 171);
             this.buttonGenerateListfile.Name = "buttonGenerateListfile";
             this.buttonGenerateListfile.Size = new System.Drawing.Size(102, 37);
             this.buttonGenerateListfile.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             // buttonGeneratePatch
             // 
-            this.buttonGeneratePatch.Location = new System.Drawing.Point(262, 146);
+            this.buttonGeneratePatch.Location = new System.Drawing.Point(260, 171);
             this.buttonGeneratePatch.Name = "buttonGeneratePatch";
             this.buttonGeneratePatch.Size = new System.Drawing.Size(102, 37);
             this.buttonGeneratePatch.TabIndex = 1;
@@ -100,11 +101,22 @@
             this.buttonFindPath.UseVisualStyleBackColor = true;
             this.buttonFindPath.Click += new System.EventHandler(this.buttonFindPath_Click);
             // 
+            // checkBoxListfileID
+            // 
+            this.checkBoxListfileID.AutoSize = true;
+            this.checkBoxListfileID.Location = new System.Drawing.Point(37, 133);
+            this.checkBoxListfileID.Name = "checkBoxListfileID";
+            this.checkBoxListfileID.Size = new System.Drawing.Size(154, 17);
+            this.checkBoxListfileID.TabIndex = 7;
+            this.checkBoxListfileID.Text = "Take the ID from listfile.scv";
+            this.checkBoxListfileID.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 206);
+            this.ClientSize = new System.Drawing.Size(391, 221);
+            this.Controls.Add(this.checkBoxListfileID);
             this.Controls.Add(this.buttonFindPath);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPath);
@@ -132,6 +144,7 @@
         private System.Windows.Forms.TextBox textBoxPath;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonFindPath;
+        private System.Windows.Forms.CheckBox checkBoxListfileID;
     }
 }
 
