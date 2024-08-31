@@ -7,7 +7,7 @@
 ### Installation
 
 * Compile yourself or download latest [Release](https://github.com/MuDaK-bit/IDs-Generator/releases)
-* Download community listfile from https://wago.tools/files and grab it to exe directory.
+* Download community listfile from https://wago.tools/files and grab it to exe directory, rename it to "listfile".
 
 ### How to use
 
