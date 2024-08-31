@@ -13,7 +13,7 @@
 
 * Open IDs Generator and specify the initial ID
 * Specify the path to the files that should be in patch.json/list file.scv
-* If you want take IDs from listfile.scv, check the box next to "Take the ID from listfile.scv". The file names that will not be found in the listfile.scv will be numbered starting with the initial ID + 1
+* If you want take IDs from listfile.scv for patch.json, check the box next to "Take the ID from listfile.scv". The file names that will not be found in the listfile.scv will be numbered starting with the initial ID + 1
 * Click on "Generate listfile" or "Generate patch.json"
 * ...
 * Done!
